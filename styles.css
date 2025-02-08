@@ -2,38 +2,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
 
 
+:root{
+  --white: hsl(0, 0%, 100%);
+  --stone-100:hsl(30, 54%, 90%);
+  --stone-150:hsl(30, 18%, 87%);
+  --stone-600:hsl(30, 10%, 34%);
+  --stone-900:hsl(24, 5%, 18%);
+  --brown-800:hsl(14, 45%, 36%);
+  --rose-800:hsl(332, 51%, 32%);
+  --rose-50:hsl(330, 100%, 98%);
+}
+
 body{
-  background-color: hsl(30, 54%, 90%);
+  background-color: var(--stone-100);
   font-family: 'Outfit';
   font-weight: 400;
   font-size: 16px;
-  color: hsl(30, 10%, 34%);
+  color: var(--stone-600);
+}
+.product{
+  margin: 100px 0;;
 }
 
-.product{
-  background-color: hsl(0, 0%, 100%);
+.product-wrapper{
+  background-color: var(--white);
   max-width: 700px;
   margin: auto;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 16px;
+  max-width: 650px;
 }
 
 .recipe-title{
   font-family: 'Young Serif', serif;
-  color:  hsl(24, 5%, 18%);
+  color:  var(--stone-900);
 }
 
 .prepare-contain{
-  background-color: hsl(330, 100%, 98%);
+  background-color: var(--rose-50);
   padding: 1px 0 1px 20px;
   border-radius: 10px;
 }
 .prepare-contain>h3{
-  color:  hsl(332, 51%, 32%);
-}
-
-ol, ul{
-  padding-left: 20px;;
+  color:  var(--rose-800);
 }
 
 .image img {
@@ -42,19 +53,51 @@ ol, ul{
 
 }
 
+ol, ul, li{
+  padding-left: 20px;
+  padding-bottom: 8px;
+}
+ol::marker{
+  font-weight: 600;
+}
+
+li::marker{
+  color: var(--brown-800);
+}
 
 .category-title{
-  color: hsl(14, 45%, 36%);
+  color: var(--brown-800);
   font-family: 'Young Serif', serif;
   font-size: 25px;
 }
 
-.table{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: start;
+.head{
+  border-bottom: 1px solid var(--stone-150);
+  padding: 5px;
+}
+.head:last-child{
+  border-bottom: none;
 }
 
-.gram{
-  color:hsl(14, 45%, 36%)
+.nutrition-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-table td{
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition-table tr:last-child td{
+  border-bottom: none;
+}
+
+td{
+  font-weight: 400;
+}
+
+.data{
+  color: var(--brown-800);
+  font-weight: 700;
 }
